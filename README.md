@@ -1,3 +1,7 @@
 # Strapi application
 
-A quick description of your strapi application
+ REST API 
+ 
+#Developer mode  : npm run develop
+
+#Production mode : npm run start
