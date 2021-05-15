@@ -12,3 +12,4 @@ step 2 :  #Developer mode  : npm run develop
 
 
 TEST MAY
+git branch -M master
