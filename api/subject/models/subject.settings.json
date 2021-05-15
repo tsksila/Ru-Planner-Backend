@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "name": "Subject"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subj_code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "subj_fullname": {
+      "type": "string",
+      "required": true
+    },
+    "subj_credit": {
+      "type": "integer",
+      "default": 3,
+      "required": true
+    },
+    "subject_reviews": {
+      "via": "subject",
+      "collection": "subject-review"
+    }
+  }
+}

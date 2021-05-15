@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "majors",
+  "info": {
+    "name": "Major",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "maj_name": {
+      "type": "string",
+      "required": true
+    },
+    "faculty": {
+      "via": "majors",
+      "model": "faculty"
+    },
+    "users": {
+      "via": "major",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

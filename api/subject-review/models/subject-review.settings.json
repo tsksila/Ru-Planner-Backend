@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subject_reviews",
+  "info": {
+    "name": "SubjectReview"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment": {
+      "type": "string",
+      "default": "ไม่มีความเห็น",
+      "required": false,
+      "maxLength": 255
+    },
+    "rating": {
+      "type": "integer",
+      "max": 5,
+      "default": 3
+    },
+    "subject": {
+      "model": "subject",
+      "via": "subject_reviews"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "subject_reviews"
+    }
+  }
+}

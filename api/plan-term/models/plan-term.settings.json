@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plan_terms",
+  "info": {
+    "name": "PlanTerm"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "term_year": {
+      "type": "integer",
+      "required": true,
+      "max": 8
+    },
+    "term_num": {
+      "type": "integer",
+      "max": 3,
+      "required": true
+    },
+    "plan": {
+      "model": "plan",
+      "via": "plan_terms"
+    },
+    "subjects": {
+      "collection": "subject"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "my_schedules",
+  "info": {
+    "name": "MySchedule"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "s_time": {
+      "type": "time",
+      "required": true
+    },
+    "e_time": {
+      "type": "time",
+      "required": true
+    },
+    "room": {
+      "type": "string",
+      "required": false
+    },
+    "day": {
+      "type": "integer",
+      "required": true,
+      "max": 6
+    },
+    "subject": {
+      "model": "subject"
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

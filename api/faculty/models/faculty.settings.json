@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faculties",
+  "info": {
+    "name": "Faculty",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fac_name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "university": {
+      "via": "faculties",
+      "model": "university"
+    },
+    "majors": {
+      "via": "faculty",
+      "collection": "majors"
+    }
+  }
+}

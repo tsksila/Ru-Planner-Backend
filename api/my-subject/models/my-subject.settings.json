@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "my_subjects",
+  "info": {
+    "name": "mySubject",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "grade": {
+      "type": "string",
+      "required": true,
+      "default": "2",
+      "maxLength": 4
+    },
+    "user": {
+      "via": "my_subjects",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "subject": {
+      "model": "subject"
+    }
+  }
+}

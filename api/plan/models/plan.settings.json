@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plans",
+  "info": {
+    "name": "Plan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "plan_name": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "plans"
+    },
+    "plan_terms": {
+      "via": "plan",
+      "collection": "plan-term"
+    },
+    "plan_reviews": {
+      "via": "plan",
+      "collection": "plan-review"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/my-schedules",
+      "handler": "my-schedule.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/my-schedules/count",
+      "handler": "my-schedule.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/my-schedules/:id",
+      "handler": "my-schedule.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/my-schedules",
+      "handler": "my-schedule.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/my-schedules/:id",
+      "handler": "my-schedule.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/my-schedules/:id",
+      "handler": "my-schedule.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

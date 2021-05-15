@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plan_reviews",
+  "info": {
+    "name": "PlanReview"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment": {
+      "type": "string",
+      "default": "ไม่มีความคิดเห็น",
+      "maxLength": 255
+    },
+    "rating": {
+      "type": "integer",
+      "max": 5,
+      "default": 3
+    },
+    "plan": {
+      "model": "plan",
+      "via": "plan_reviews"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "plan_reviews"
+    }
+  }
+}

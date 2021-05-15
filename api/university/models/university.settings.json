@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "universities",
+  "info": {
+    "name": "University",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uni_name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "faculties": {
+      "via": "university",
+      "collection": "faculty"
+    }
+  }
+}

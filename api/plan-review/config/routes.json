@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/plan-reviews",
+      "handler": "plan-review.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/plan-reviews/count",
+      "handler": "plan-review.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/plan-reviews/:id",
+      "handler": "plan-review.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/plan-reviews",
+      "handler": "plan-review.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/plan-reviews/:id",
+      "handler": "plan-review.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/plan-reviews/:id",
+      "handler": "plan-review.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
