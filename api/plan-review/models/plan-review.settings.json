@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "plan_reviews",
   "info": {
-    "name": "PlanReview"
+    "name": "PlanReview",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -26,9 +27,13 @@
       "via": "plan_reviews"
     },
     "user": {
+      "via": "my_plan_reviews",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "plan_reviews"
+      "model": "user"
+    },
+    "users_like": {
+      "plugin": "users-permissions",
+      "collection": "user"
     }
   }
 }

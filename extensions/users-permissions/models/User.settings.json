@@ -67,17 +67,20 @@
       "via": "user",
       "collection": "my-subject"
     },
-    "plans": {
-      "via": "user",
-      "collection": "plan"
+    "my_plans": {
+      "collection": "plan",
+      "via": "user"
     },
-    "plan_reviews": {
+    "my_plan_reviews": {
       "via": "user",
       "collection": "plan-review"
     },
-    "subject_reviews": {
-      "via": "user",
-      "collection": "subject-review"
+    "my_subject_reviews": {
+      "collection": "subject-review",
+      "via": "user"
+    },
+    "select_plans": {
+      "collection": "plan"
     }
   }
 }

@@ -27,9 +27,9 @@
       "via": "subject_reviews"
     },
     "user": {
+      "via": "my_subject_reviews",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "subject_reviews"
+      "model": "user"
     }
   }
 }
