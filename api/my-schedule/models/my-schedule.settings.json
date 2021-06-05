@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "my_schedules",
   "info": {
-    "name": "MySchedule"
+    "name": "MySchedule",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -26,14 +27,20 @@
     "day": {
       "type": "integer",
       "required": true,
-      "max": 6
+      "max": 7,
+      "min": 0
     },
     "subject": {
       "model": "subject"
     },
-    "users": {
+    "user": {
+      "via": "my_schedules",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "note": {
+      "type": "string",
+      "maxLength": 100
     }
   }
 }
