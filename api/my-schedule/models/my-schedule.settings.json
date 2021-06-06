@@ -30,9 +30,6 @@
       "max": 7,
       "min": 0
     },
-    "subject": {
-      "model": "subject"
-    },
     "user": {
       "via": "my_schedules",
       "plugin": "users-permissions",
@@ -40,6 +37,11 @@
     },
     "note": {
       "type": "string",
+      "maxLength": 100
+    },
+    "topic": {
+      "type": "string",
+      "required": true,
       "maxLength": 100
     }
   }
